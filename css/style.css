@@ -65,6 +65,90 @@
   position: relative;
 }
 
+.page-bk-01 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/01.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-bk-02 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/02.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-bk-03 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/03.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-bk-04 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/04.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-bk-05 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/05.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-bk-06 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/06.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-bk-07 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/07.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: .15;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .name {
   color: #a6a2a2;
   font-size: 36px;
@@ -86,7 +170,6 @@
 
 .title-bk-img {
   position: absolute;
-  opacity: .3;
   top: 0;
   left: 0;
   width: 100%;
@@ -144,19 +227,22 @@
   font-size: 80px;
 }
 
-.title-box div:last-child {
+.title-box div:nth-child(2) {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   -webkit-transform: translateZ(50px);
           transform: translateZ(50px);
   font-size: 50px;
 }
 
-.ill-by-kaito {
-  margin-top: 10%;
+.title-box .ill-by-kaito {
+  margin-top: 5%;
   text-align: center;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
+  color: #ffffffcc;
+  -webkit-transform: translateZ(30px);
+          transform: translateZ(30px);
 }
 
 .catalog {
@@ -170,8 +256,11 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 80%;
-  margin: 10% auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
   padding: 10%;
   background-color: #FBFBF2;
 }
@@ -318,7 +407,122 @@
 
 .page-03 .content {
   position: absolute;
+  top: 50%;
+  left: 45%;
+  text-align: right;
+}
+
+.page-04 .img {
+  width: 95%;
+  margin: 0 2.5%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-04 .name {
+  position: absolute;
+  top: 25%;
+  left: 14%;
+}
+
+.page-04 .content {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  text-align: left;
+}
+
+.page-05 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-05 .img {
+  height: 101%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+.page-05 .name {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  position: absolute;
+  top: 18%;
+  left: 9%;
+  letter-spacing: 5px;
+}
+
+.page-05 .content {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 20%;
+  right: 9%;
+}
+
+.page-05 .content span {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  letter-spacing: 5px;
+}
+
+.page-05 .content span:last-child {
+  margin-top: 100px;
+}
+
+.page-06 .img {
+  width: 95%;
+  margin: 0 2.5%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-06 .name {
+  position: absolute;
+  top: 35%;
+  left: 54%;
+}
+
+.page-06 .content {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  text-align: right;
+}
+
+.page-07 .img {
+  width: 95%;
+  margin: 0 2.5%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.page-07 .name {
+  position: absolute;
+  top: 25%;
+  left: 14%;
+}
+
+.page-07 .content {
+  position: absolute;
   top: 45%;
-  left: 20%;
+  left: 15%;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
