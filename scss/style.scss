@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+// font-family: 'Amatic SC', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100&display=swap');
+// font-family: 'M PLUS Rounded 1c', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FBFBF2;
+  color: #A6A2A2;
+  font-family: '微軟正黑體';
+  font-weight: 200;
+  overflow: hidden;
+}
+
+.main {
+  display: inline-block;
+}
+
+.btn-wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#book {
+  width: 1000px;
+  height: 667px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  position: relative;
+}
+
+.book-item {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.name {
+  color: #a6a2a2;
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+.content {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+}
+
+
+// ----- 標題頁
+.title-bk-img {
+  position: absolute;
+  opacity: .3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../image/04.jpg');
+  background-size: cover;
+  background-position: top;
+}
+
+.title-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 20% auto 0 auto;
+  background-color: transparent;
+  transform-style: preserve-3d;
+  transform: perspective(500px);
+
+  div {
+    width: 100%;
+    height: 100%;
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffffcc;
+    &:first-child {
+      text-shadow: 0 0 15px rgba(0, 0, 0, .4);
+      transform: translateZ(100px);
+      font-size: 80px;
+    }
+    &:last-child {
+      text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+      transform: translateZ(50px);
+      font-size:  50px;
+    }
+  }
+}
+
+.ill-by-kaito {
+  margin-top: 10%;
+  text-align: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+// ----- 目錄
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  margin: 10% auto;
+  padding: 10%;
+  background-color: #FBFBF2;
+
+  .catalog-item {
+    width: 100%;
+    height: 8%;
+    margin: 1.5% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    letter-spacing: 1.5px;
+
+    span {
+      display: inline-block;
+      transition: all .3s;
+      &:first-child {
+        width: 20%;
+        font-family: 'Amatic SC', cursive;
+        font-size: 45px;
+        color: #847577;
+      }
+      &:last-child {
+        width: 70%;
+        font-size: 16px;
+        font-weight: 200;
+      }
+    }
+
+    &:hover {
+      span {
+        transform: translateZ(20px) scale(1.2);
+        &:first-child {
+          color: #a6a2a2;
+        }
+        &:last-child {
+          color: #555b6e;
+        }
+      }
+    }
+  }
+}
+
+// ----- 01 普隆德拉原野
+.page-01 {
+  .img {
+    width: 95%;
+    margin: 0 2.5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .name {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+  }
+  .content {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+  }
+}
+
+// ----- 02 超級初心者登場！
+.page-02 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .img {
+    height: 101%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+  }
+  .name {
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 10%;
+    left: 6%;
+    letter-spacing: 5px;
+  }
+  .content {
+    flex-direction: row;
+    position: absolute;
+    top: 25%;
+    right: 6%;
+    span {
+      writing-mode: vertical-lr;
+      letter-spacing: 5px;
+      &:last-child {
+        margin-top: 140px;
+      }
+    }
+  }
+}
+
+// ----- 03 瀑布前的忍者與忍蛙
+.page-03 {
+  .img {
+    width: 95%;
+    margin: 0 2.5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .name {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+  }
+  .content {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+  }
+}
+
+

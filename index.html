@@ -6,10 +6,119 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Picture book</title>
+
+  <link rel="stylesheet" type="text/css" href="plugin/bookblock.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="plugin/modernizr.custom.js"></script>
+
 </head>
 
 <body>
+  <div id="wrapper">
+    <h1 style="margin-bottom: 10px;">just a title</h1>
+    <div class="main">
+      <div id="book" class="bb-bookblock">
+        <!-- 00 - 封面 + 目錄 -->
+        <div class="book-item bb-item">
+          <div class="page">
+            <div class="title-bk-img"></div>
+            <div class="title-box" data-tilt data-tilt-full-page-listening data-tilt-reverse="true">
+              <div>Ragnarok</div>
+              <div>Picture Book</div>
+            </div>
+            <div class="ill-by-kaito">Illustrations by Kaito</div>
+          </div>
+          <div class="page">
+            <div class="catalog">
+              <div class="catalog-item" data-tilt>
+                <span>01</span>
+                <span>普隆德拉原野</span>
+              </div>
+              <div class="catalog-item" data-tilt>
+                <span>02</span>
+                <span>超級初心者登場！</span>
+              </div>
+              <div class="catalog-item" data-tilt>
+                <span>03</span>
+                <span>瀑布前的忍者與忍蛙</span>
+              </div>
+              <div class="catalog-item" data-tilt>
+                <span>04</span>
+                <span>蘇格拉特沙漠的夜晚</span>
+              </div>
+              <div class="catalog-item" data-tilt>
+                <span>05</span>
+                <span>共同戰線</span>
+              </div>
+              <div class="catalog-item" data-tilt>
+                <span>06</span>
+                <span>織花圈</span>
+              </div>
+              <div class="catalog-item" data-tilt>
+                <span>07</span>
+                <span>寬廣配藥！</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 01 - 普隆德拉原野 -->
+        <div class="book-item bb-item">
+          <div class="page page-01">
+            <img src="./image/01.jpg" alt="普隆德拉原野" class="img">
+          </div>
+          <div class="page page-01">
+            <div class="name">普隆德拉原野</div>
+            <div class="content">
+              <span>熟悉的普隆德拉南門外</span>
+              <span>劍士與她的寵物小野豬一同冒險</span>
+            </div>
+          </div>
+        </div>
+        <!-- 02 - 超級初心者登場！ -->
+        <div class="book-item bb-item">
+          <div class="page-02">
+            <img src="./image/02.jpg" alt="超級初心者登場！" class="img">
+            <div class="name">超級初心者登場！</div>
+            <div class="content">
+              <span>超級初心者從神秘紫箱</span>
+              <span>獲得了幸運短劍！</span>
+            </div>
+          </div>
+        </div>
+        <!-- 03 - 瀑布前的忍者與忍蛙 -->
+        <div class="book-item bb-item">
+          <div class="page page-03">
+            <div class="name">瀑布前的忍者與忍蛙</div>
+            <div class="content">
+              <span>戴著狐狸面具的忍者</span>
+              <span>與她的夥伴忍蛙</span>
+              <span>在滂薄的瀑布前帥氣出場</span>
+            </div>
+          </div>
+          <div class="page page-03">
+            <img src="./image/03.jpg" alt="瀑布前的忍者與忍蛙" class="img">
+          </div>
+        </div>
 
+      </div>
+
+      <div class="btn-wrap">
+        <button id="first">first</button>
+        <button id="prev">prev</button>
+        <button id="next">next</button>
+        <button id="last">last</button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+  <script src="./plugin/jquery-3.6.0.min.js"></script>
+  <script src="./plugin/jquery.bookblock.js"></script>
+  <script src="./plugin/vanilla-tilt.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
