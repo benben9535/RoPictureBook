@@ -22,6 +22,8 @@
   font-family: '微軟正黑體';
   font-weight: 200;
   overflow: hidden;
+  background-color: #fbfbf2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23aca292' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .main {
@@ -29,9 +31,24 @@
 }
 
 .btn-wrap {
-  margin-top: 20px;
+  margin: 20px auto;
+  width: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  span {
+    cursor: pointer;
+    margin: 10px;
+    width: 13px;
+    height: 13px;
+    background-color: #b1afaf;
+    border-radius: 50%;
+    transition: all .2s;
+  }
+  span.current {
+    background-color: #555b6e;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+  }
 }
 
 #book {
@@ -78,6 +95,45 @@
   flex-direction: column;
   letter-spacing: 1.5px;
   line-height: 1.8;
+}
+.img {
+  width: 95%;
+  margin: 2.5%;
+}
+.button-prev, .button-next {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0%;
+  border-radius: 50%;
+  transition: all .3s;
+  img {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s;
+  }
+  &:hover {
+    img {
+      transform: translate(-50%, -50%) scale(1.2);
+      filter: brightness(1.2);
+    }
+  }
+}
+.button-prev {
+  left: 0%;
+}
+
+.button-next {
+  right: 0%;
+}
+
+.button-next:hover .btn-wrap {
+  display: none;
 }
 
 
@@ -192,13 +248,6 @@
 
 // ----- 01 普隆德拉原野
 .page-01 {
-  .img {
-    width: 95%;
-    margin: 0 2.5%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   .name {
     position: absolute;
     top: 30%;
@@ -219,6 +268,8 @@
   overflow: hidden;
 
   .img {
+    width: unset;
+    margin: 0;
     height: 101%;
     position: absolute;
     top: 50%;
@@ -250,13 +301,6 @@
 
 // ----- 03 瀑布前的忍者與忍蛙
 .page-03 {
-  .img {
-    width: 95%;
-    margin: 0 2.5%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   .name {
     position: absolute;
     top: 30%;
@@ -272,13 +316,6 @@
 
 // ----- 04 蘇格拉特沙漠的夜晚
 .page-04 {
-  .img {
-    width: 95%;
-    margin: 0 2.5%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   .name {
     position: absolute;
     top: 25%;
@@ -299,6 +336,8 @@
   position: relative;
   overflow: hidden;
   .img {
+    width: unset;
+    margin: 0;
     height: 101%;
     position: absolute;
     top: 50%;
@@ -330,21 +369,14 @@
 
 // ----- 06 織花圈
 .page-06 {
-  .img {
-    width: 95%;
-    margin: 0 2.5%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   .name {
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 54%;
   }
   .content {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 45%;
     text-align: right;
   }
@@ -352,13 +384,6 @@
 
 // ----- 07 寬廣配藥！
 .page-07 {
-  .img {
-    width: 95%;
-    margin: 0 2.5%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   .name {
     position: absolute;
     top: 25%;
@@ -369,5 +394,78 @@
     top: 45%;
     left: 15%;
     text-align: left;
+  }
+}
+
+// ----- 08 Kaito
+.page-bk-08 {
+  width: 100%;
+  height: 100%;
+  background-image: url('../image/04.jpg');
+  background-size: cover;
+  background-position: bottom center;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.page-08 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    transform-style: preserve-3d;
+    transition: all .3s;
+    text-decoration: none;
+    outline: none;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url('../image/sparkles.gif');
+      background-position: center;
+      opacity: .3;
+    }
+
+
+    span {
+      display: inline-block;
+      margin: 3px;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-family: 'M PLUS Rounded 1c', sans-serif;
+      transition: all .3s;
+      z-index: 1;
+      &:last-child {
+        font-size: 24px;
+      }
+    }
+
+    .icon-ig {
+      width: 28px;
+      height: 28px;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+      &::before {
+        opacity: .8;
+      }
+      span {
+        transform: translateZ(50px);
+      }
+    }
   }
 }

@@ -13,25 +13,33 @@ function initBook() {
   });
 
   // add navigation events
-  $('#next').on('click touchstart', function() {
+  $('.button-next').on('click touchstart', function() {
     book.bookblock('next');
     return false;
   });
 
-  $('#prev').on('click touchstart', function() {
+  $('.button-prev').on('click touchstart', function() {
     book.bookblock('prev');
     return false;
   });
 
-  $('#first').on('click touchstart', function() {
-    book.bookblock('first');
-    return false;
+  $('.catalog-item').each( function(i) {
+    $(this).on('click touchstart', function() {
+      book.bookblock('jump', i + 2);
+      return false;
+    });
   });
 
-  $('#last').on('click touchstart', function() {
-    book.bookblock('last');
-    return false;
+  $('.btn-wrap').children().each( function(i) {
+    $(this).on('click touchstart', function() {
+      book.bookblock('jump', i + 1);
+      $('.btn-wrap').children().removeClass('current');
+      $(this).addClass('current');
+      return false;
+    });
   });
+
+
   
   
   // add swipe events
