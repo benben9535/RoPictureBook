@@ -25,7 +25,7 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #FBFBF2;
-  color: #A6A2A2;
+  color: #928d8d;
   font-family: '微軟正黑體';
   font-weight: 200;
   overflow: hidden;
@@ -65,12 +65,35 @@
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (max-width: 767px) {
+  .btn-wrap {
+    width: 70%;
+  }
+  .btn-wrap span {
+    margin: 6px;
+  }
+}
+
 #book {
   width: 1000px;
   height: 667px;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  #book {
+    width: 750px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #book {
+    width: 350px;
+    height: 233px;
+  }
 }
 
 .book-item {
@@ -170,9 +193,16 @@
 }
 
 .name {
-  color: #a6a2a2;
+  color: #8f8c8c;
   font-size: 36px;
   letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+  .name {
+    font-size: 16px;
+  }
 }
 
 .content {
@@ -186,6 +216,13 @@
           flex-direction: column;
   letter-spacing: 1.5px;
   line-height: 1.8;
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    font-size: 12px;
+    letter-spacing: .5px;
+  }
 }
 
 .img {
@@ -221,6 +258,20 @@
           transform: translate(-50%, -50%) scale(1.2);
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
+}
+
+@media screen and (max-width: 1024px) {
+  .button-prev, .button-next {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button-prev, .button-next {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .button-prev {
@@ -312,6 +363,18 @@
           transform: translateZ(30px);
 }
 
+@media screen and (max-width: 767px) {
+  .title-box div:first-child {
+    font-size: 40px;
+  }
+  .title-box div:nth-child(2) {
+    font-size: 25px;
+  }
+  .title-box .ill-by-kaito {
+    font-size: 12px;
+  }
+}
+
 .catalog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +451,30 @@
   color: #555b6e;
 }
 
+@media screen and (max-width: 1024px) {
+  .catalog .catalog-item {
+    margin: 3% 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .catalog .catalog-item {
+    margin: 5% 0;
+    letter-spacing: .5px;
+  }
+  .catalog .catalog-item span {
+    white-space: nowrap;
+  }
+  .catalog .catalog-item span:first-child {
+    width: 10%;
+    font-size: 25px;
+  }
+  .catalog .catalog-item span:last-child {
+    width: 85%;
+    font-size: 12px;
+  }
+}
+
 .page-01 .name {
   position: absolute;
   top: 30%;
@@ -398,6 +485,15 @@
   position: absolute;
   top: 45%;
   left: 20%;
+}
+
+@media screen and (max-width: 767px) {
+  .page-01 .name {
+    left: 4%;
+  }
+  .page-01 .content {
+    left: 4%;
+  }
 }
 
 .page-02 {
@@ -450,6 +546,23 @@
   margin-top: 140px;
 }
 
+@media screen and (max-width: 1024px) {
+  .page-02 .content {
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-02 .content {
+    top: 6%;
+    right: 3%;
+    letter-spacing: 2.5px;
+  }
+  .page-02 .content span:last-child {
+    margin-top: 60px;
+  }
+}
+
 .page-03 .name {
   position: absolute;
   top: 30%;
@@ -463,6 +576,18 @@
   text-align: right;
 }
 
+@media screen and (max-width: 1024px) {
+  .page-03 .name {
+    left: 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-03 .content {
+    left: 18%;
+  }
+}
+
 .page-04 .name {
   position: absolute;
   top: 25%;
@@ -474,6 +599,22 @@
   top: 40%;
   left: 15%;
   text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-04 .name {
+    left: 3%;
+  }
+  .page-04 .content {
+    left: 4%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-04 .content {
+    left: 0%;
+    text-align: center;
+  }
 }
 
 .page-05 {
@@ -526,6 +667,27 @@
   margin-top: 100px;
 }
 
+@media screen and (max-width: 1024px) {
+  .page-05 .content {
+    top: 8%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-05 .content {
+    top: -3%;
+    right: 7%;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .page-05 .content span {
+    letter-spacing: 2.5px;
+  }
+  .page-05 .content span:last-child {
+    margin-top: 20px;
+  }
+}
+
 .page-06 .name {
   position: absolute;
   top: 30%;
@@ -539,6 +701,12 @@
   text-align: right;
 }
 
+@media screen and (max-width: 767px) {
+  .page-06 .content {
+    left: 20%;
+  }
+}
+
 .page-07 .name {
   position: absolute;
   top: 25%;
@@ -550,6 +718,13 @@
   top: 45%;
   left: 15%;
   text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .page-07 .content {
+    top: 40%;
+    left: 15%;
+  }
 }
 
 .page-bk-08 {
