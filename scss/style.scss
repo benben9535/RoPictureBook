@@ -248,6 +248,7 @@
   height: 100%;
   padding: 10%;
   background-color: #FBFBF2;
+  overflow: hidden;
 
   .catalog-item {
     width: 100%;
@@ -360,7 +361,7 @@
     flex-direction: row;
     position: absolute;
     top: 25%;
-    right: 6%;
+    left: 89%;
     span {
       writing-mode: vertical-lr;
       letter-spacing: 5px;
@@ -377,7 +378,7 @@
   @media screen and (max-width: 767px) {
     .content {
       top: 6%;
-      right: 3%;
+      left: 85%;
       letter-spacing: 2.5px;
       span {
         &:last-child {
@@ -469,7 +470,7 @@
     flex-direction: row;
     position: absolute;
     top: 20%;
-    right: 9%;
+    left: 85%;
     span {
       writing-mode: vertical-lr;
       letter-spacing: 5px;
@@ -486,7 +487,7 @@
   @media screen and (max-width: 767px) {
     .content {
       top: -3%;
-      right: 7%;
+      left: 81%;
       transform: scale(.9);
       span {
         letter-spacing: 2.5px;

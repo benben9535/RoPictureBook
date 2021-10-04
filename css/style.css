@@ -393,6 +393,7 @@
   height: 100%;
   padding: 10%;
   background-color: #FBFBF2;
+  overflow: hidden;
 }
 
 .catalog .catalog-item {
@@ -532,7 +533,7 @@
           flex-direction: row;
   position: absolute;
   top: 25%;
-  right: 6%;
+  left: 89%;
 }
 
 .page-02 .content span {
@@ -555,7 +556,7 @@
 @media screen and (max-width: 767px) {
   .page-02 .content {
     top: 6%;
-    right: 3%;
+    left: 85%;
     letter-spacing: 2.5px;
   }
   .page-02 .content span:last-child {
@@ -653,7 +654,7 @@
           flex-direction: row;
   position: absolute;
   top: 20%;
-  right: 9%;
+  left: 85%;
 }
 
 .page-05 .content span {
@@ -676,7 +677,7 @@
 @media screen and (max-width: 767px) {
   .page-05 .content {
     top: -3%;
-    right: 7%;
+    left: 81%;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
